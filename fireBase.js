@@ -1,4 +1,3 @@
-console.log("Hello world ace");
 var app_fireBase = {};
 (function(){
      var firebaseConfig = {
@@ -15,4 +14,4 @@ var app_fireBase = {};
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
         app_fireBase = firebase;
-})()
+})();
