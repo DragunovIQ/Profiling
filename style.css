@@ -1,0 +1,24 @@
+body {
+  background: #072e67;
+  background: -webkit-gradient(linear, left top, right top, from(#072e67), color-stop(65%, #095874), to(#0b9a88));
+  background: linear-gradient(90deg, #072e67 0%, #095874 65%, #0b9a88 100%);
+}
+
+#container {
+  width: 600px;
+  margin: auto;
+  border: 1px solid rgba(0, 0, 0, 0.568);
+  padding: 60px;
+  border-radius: 5px;
+  margin-top: 200px;
+  background-color: #fbfbfb2f;
+}
+
+input {
+  background-color: #fbfbfb !important;
+}
+
+.btn {
+  border: 1px solid rgba(0, 0, 0, 0.37) !important;
+}
+/*# sourceMappingURL=style.css.map */
