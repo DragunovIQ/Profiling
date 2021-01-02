@@ -9,7 +9,7 @@ var mainApp = {};
           }else{
                // redirect to the logIn page
                uid = null;
-               window.location.replace("login.php");
+               window.location.replace("login.html");
           }
      });
      function logOut(){
@@ -31,3 +31,4 @@ function saveMessage(name,lname,phone,info){
           Info: info,
      });
 }
+console.log(messageRef);
