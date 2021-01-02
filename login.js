@@ -17,7 +17,7 @@ console.log("Hello");
           },
           // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
           signInFlow: 'popup',
-          signInSuccessUrl: 'index.html',
+          signInSuccessUrl: 'index/index.html',
           signInOptions: [
             // Leave the lines as is for the providers you want to offer your users.
           //   firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -28,7 +28,7 @@ console.log("Hello");
           //   firebase.auth.PhoneAuthProvider.PROVIDER_ID
           ],
           // Terms of service url.
-          tosUrl: 'index.html',
+          tosUrl: 'index/index.html',
           // Privacy policy url.
           privacyPolicyUrl: '<your-privacy-policy-url>'
      };
