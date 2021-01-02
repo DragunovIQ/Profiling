@@ -21,7 +21,7 @@ function fetching(id){
      return document.getElementById(id);
 }
 var sub = fetching("sub");
-var messageRef = firebase.database().ref('messages');
+var messageRef = firebase.database().ref('messages/users');
 function saveMessage(name,lname,phone,info){
      var newMessageRef = messageRef.push();
      newMessageRef.set({
