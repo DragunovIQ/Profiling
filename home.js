@@ -22,13 +22,14 @@ function fetching(id){
 }
 var sub = fetching("sub");
 var messageRef = firebase.database().ref('messages/users');
-function saveMessage(name,lname,phone,info){
+function saveMessage(name,lname,phone,info,date){
      var newMessageRef = messageRef.push();
      newMessageRef.set({
           Name: name,
           Last_name: lname,
           Phone: phone,
           Info: info,
+          Date: date
      });
 }
 console.log(messageRef);

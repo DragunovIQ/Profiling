@@ -32,26 +32,13 @@
           </form>
      </div>
      
-     <?php include 'main.php'; ?>
      <script src="/fireBase.js"></script>
      <script type="text/javascript">
      
      function fetch(obj){
           return document.getElementById(obj);
      }
-     // Initialize Firebase
 
-     var messageRef = firebase.database().ref("name");
-     console.log(firebase.database());
-     function saveMessage(fname, lastname, phonenum, region){
-          var newMessageRef = messageRef.push();
-          newMessageRef.set({
-               Name: fname,
-               Lastname: lastname,
-               Phone_Number: phonenum,
-               Card_number: region,
-          });
-     }
      var sub = fetch("sub");
      sub.addEventListener('click', (e)=>{
 
@@ -60,35 +47,20 @@
           var lname = fetch("lname").value;
           var pnum = fetch("pnum").value;
           var region = fetch("region").value;
-
-          saveMessage(name,lname,pnum,region);
-
-          let valname = name.value;
-          let vallname = lname.value;
-          let valpnum = pnum.value;
-          let valreg = region.value;
-          var valtable = document.getElementById('table');
+          var currentdate = new Date(); 
+          var datetime = "Date: " + currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " Time: "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+          saveMessage(name,lname,pnum,region,datetime);
 
           e.preventDefault();
           fetch("main_form").reset();
           console.log("Data sent");
 
      });
-     var counter = 0;
-     var counter2 = 0;
-
-     console.log("The 'it' counter is: " + counter);
-     console.log("The '.' count is: " + counter2);
-     var sub = document.getElementById('sub');
-     var lnameinput = document.getElementById('lname');
-     var pnuminput = document.getElementById('pnum');
-     var regioninput = document.getElementById('region');
-     var nval = name.value;
-
-     var nameinput = document.getElementById('name');
-
-
-
      </script>
      <script src="/home.js"></script>
 </body>
