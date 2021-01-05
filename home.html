@@ -35,32 +35,6 @@
      <script src="/fireBase.js"></script>
      <script type="text/javascript">
      
-     function fetch(obj){
-          return document.getElementById(obj);
-     }
-
-     var sub = fetch("sub");
-     sub.addEventListener('click', (e)=>{
-
-          e.preventDefault();
-          var name = fetch("name").value;
-          var lname = fetch("lname").value;
-          var pnum = fetch("pnum").value;
-          var region = fetch("region").value;
-          var currentdate = new Date(); 
-          var datetime = "Date: " + currentdate.getDate() + "/"
-                + (currentdate.getMonth()+1)  + "/" 
-                + currentdate.getFullYear() + " Time: "  
-                + currentdate.getHours() + ":"  
-                + currentdate.getMinutes() + ":" 
-                + currentdate.getSeconds();
-          saveMessage(name,lname,pnum,region,datetime);
-
-          e.preventDefault();
-          fetch("main_form").reset();
-          console.log("Data sent");
-
-     });
      </script>
      <script src="/home.js"></script>
 </body>
