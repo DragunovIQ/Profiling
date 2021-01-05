@@ -14,7 +14,7 @@ var mainApp = {};
                }
             uid = user.uid;
             console.log()
-            if(uid === "cJsQwUpBfeTciwL8SmyGvM3sdIz1"){
+            if(uid){
                  uid = user.uid;
             }else{
                  uid = null;
