@@ -19,4 +19,8 @@ h4, h1 {
 body {
   background: #0f3057;
 }
+
+.alert {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */

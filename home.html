@@ -9,8 +9,7 @@
      <link rel="preconnect" href="https://fonts.gstatic.com">
      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
      <link rel="icon" type="image/png" href="/images/icon.png">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
@@ -32,6 +31,9 @@
                     <input id="region" type="text" class="form-control" require>
                     <button id="sub" type="submit" class="btn btn-primary" style="margin-top: 20px;">Submit</button>
                     <button onclick = "mainApp.logOut()" class="btn btn-success" style="margin-top: 20px;">LogOut</button>
+                    <div class="alert alert-success" style="margin-top: 10px;">
+                         <strong>Success!</strong> Data sent successfully!
+                    </div>
                </div>
           </form>
      </div>
