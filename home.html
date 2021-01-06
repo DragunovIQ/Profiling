@@ -6,6 +6,8 @@
      <title>Ghena Art Media Productions</title>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
      <link rel="stylesheet" href="/css/main_css/main.css">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
@@ -14,17 +16,18 @@
      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
 </head>
 <body>
+     <div id="cont"></div>
      <div id="container1" style="width: 90%; margin: auto;">
-          <h2>Input field</h2>
+          <h1>Input field</h1>
           <form action="" method="postd" id="main_form">
                <div class="form-group">
-                    <label for="Name">Name:</label>
+                    <label for="Name"><h4>Name:</h4></label>
                     <input id="name" type="text" class="form-control" require>
-                    <label for="Lname">Last name:</label>
+                    <label for="Lname"><h4>Last name</h4></label>
                     <input id="lname" type="text" class="form-control" require>
-                    <label for="Passport">Phone Number:</label>
+                    <label for="Passport"><h4>Phone number</h4></label>
                     <input id="pnum" type="text" class="form-control" require>
-                    <label for="Region">Card number</label>
+                    <label for="Region"><h4>Card number</h4></label>
                     <input id="region" type="text" class="form-control" require>
                     <button id="sub" type="submit" class="btn btn-primary" style="margin-top: 20px;">Submit</button>
                     <button onclick = "mainApp.logOut()" class="btn btn-success" style="margin-top: 20px;">LogOut</button>

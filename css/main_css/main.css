@@ -1,6 +1,22 @@
 #container1 {
   width: 50% !important;
-  min-width: 300px;
+  min-width: 350px;
   margin-top: 50px !important;
+  color: #fbfbfb;
+}
+
+h4, h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+#cont {
+  margin-top: 50px;
+  height: 250px;
+  background: url(/images/logo.png) no-repeat center center;
+  background-size: contain;
+}
+
+body {
+  background: #0f3057;
 }
 /*# sourceMappingURL=main.css.map */
