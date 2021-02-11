@@ -5,7 +5,7 @@ var mainApp = {};
      var s;
      var latitude;
      var longitude;
-
+     //Targering Location function
      function success(data){
   
           var apikey = '45db3c31cfae4d4e90c23d301d447a61';
@@ -74,9 +74,6 @@ var mainApp = {};
                     uid = null;
                     firebase.auth().signOut();
                }
-
-               //new stuff
-
                function logOut(){
                firebase.auth().signOut();
                }
@@ -86,7 +83,8 @@ var mainApp = {};
                }
                
                var sub = fetching("sub");
-               var messageRef = firebase.database().ref('messages/marketers');
+               var messageRef = firebase.database().ref(`messages/marketers/${market}`);
+               // Saving the data to database function
                function saveMessage(name,lname,phone,info,date,marketer,loc,lat,long){
                     var newMessageRef = messageRef.push();
                     newMessageRef.set({
@@ -109,8 +107,8 @@ var mainApp = {};
                }
                
                var sub = fetch("sub");
+               // Submitting the form
                sub.addEventListener('click', (e)=>{
-               
                     e.preventDefault();
                     var name = fetch("name").value;
                     var lname = fetch("lname").value;
