@@ -25,7 +25,8 @@ console.log("Hello");
         // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
         // firebase.auth.GithubAuthProvider.PROVIDER_ID,
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
-        //firebase.auth.PhoneAuthProvider.PROVIDER_ID
+        firebase.auth.PhoneAuthProvider.PROVIDER_ID
+        
       ],
       // Terms of service url.
       tosUrl: '/home.html',
@@ -35,5 +36,6 @@ console.log("Hello");
       // Privacy policy url.
       privacyPolicyUrl: '<your-privacy-policy-url>'
     };
+    
     ui.start('#firebaseui-auth-container', uiConfig);
 })();
