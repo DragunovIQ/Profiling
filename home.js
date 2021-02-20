@@ -20,7 +20,6 @@ var mainApp = {};
             + '&q=' + encodeURIComponent(latitude + ',' + longitude)
             + '&pretty=1'
             + '&no_annotations=1';
-     
           // see full list of required and optional parameters:
           // https://opencagedata.com/api#forward
      
@@ -55,8 +54,9 @@ var mainApp = {};
      
      }
      navigator.geolocation.getCurrentPosition(success,console.error)
-     
+
      firebase.auth().onAuthStateChanged(function(user) {
+          
           if (user) {
                var market;
                // User is signed in.
@@ -121,13 +121,31 @@ var mainApp = {};
                          + currentdate.getHours() + ":"  
                          + currentdate.getMinutes() + ":" 
                          + currentdate.getSeconds();
-                    saveMessage(name,lname,pnum,region,datetime,market,s,latitude,longitude);
-                    fetch("main_form").reset();
-                    console.log("Data sent");
-                    $(".alert").slideDown();
-                    setTimeout(()=>{
-                         $(".alert").slideUp();
-                    }, 2000);
+                    var form = document.forms[0];
+                    for(let i = 0; i < form.length; i++){
+                         if(form[i].value != "" && form[i].id != "sus" && form[i].id != "sub"){
+                              form[i].style.borderColor = "green";
+                         }else if(form[i].value == "" && form[i].id != "sus" && form[i].id != "sub"){
+                              form[i].style.borderColor = "red";
+                              form[1].style.borderColor = "unset";
+                         }
+                         if(form[2].value.length < "11"){
+                              form[2].style.borderColor = "red";
+                         }
+               }
+                    if(pnum === "" || pnum.length < "11" ||  name == "" || region == ""){
+                         console.log("Error");
+                    }else{
+                         saveMessage(name,lname,pnum,region,datetime,market,s,latitude,longitude);
+                         fetch("main_form").reset();
+                         console.log("Data sent");
+                         $(".alert").slideDown();
+                         setTimeout(()=>{
+                              $(".alert").slideUp();
+                         }, 2000);     
+                         console.log(pnum.length)
+
+                    }
                });     
           }else{
                // redirect to the logIn page

@@ -21,20 +21,24 @@ console.log("Hello");
       signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-         firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-        // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+        {
+         provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+         //provider: addScope('user_birthday'),
+         //requireDisplayName:false
+        },
+         // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
         // firebase.auth.GithubAuthProvider.PROVIDER_ID,
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
         firebase.auth.PhoneAuthProvider.PROVIDER_ID
         
       ],
       // Terms of service url.
-      tosUrl: '/home.html',
+      tosUrl: '#',
       recaptchaParameters:{
         'size': 'invisible',
       },
       // Privacy policy url.
-      privacyPolicyUrl: '<your-privacy-policy-url>'
+      privacyPolicyUrl: '#'
     };
     
     ui.start('#firebaseui-auth-container', uiConfig);

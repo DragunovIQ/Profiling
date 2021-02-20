@@ -3,13 +3,14 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Ghena Art Media Productions</title>
+     <title>Ghena Marketing</title>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
      <link rel="stylesheet" href="/css/main_css/main.css">
      <link rel="preconnect" href="https://fonts.gstatic.com">
      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
      <link rel="icon" type="image/png" href="/images/icon.png">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>     
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
@@ -22,15 +23,15 @@
           <form action="" method="postd" id="main_form">
                <div class="form-group">
                     <label for="Name"><h4>Name:</h4></label>
-                    <input id="name" type="text" class="form-control" require>
+                    <input id="name" type="text" class="form-control" placeholder="ألاسم" require >
                     <label for="Lname"><h4>Last name</h4></label>
-                    <input id="lname" type="text" class="form-control" require>
+                    <input id="lname" type="text" class="form-control" placeholder="" disabled>
                     <label for="Passport"><h4>Phone number</h4></label>
-                    <input id="pnum" type="text" class="form-control" require>
+                    <input id="pnum" type="number" class="form-control" placeholder="رقم الهاتف" require>
                     <label for="Region"><h4>Card number</h4></label>
-                    <input id="region" type="text" class="form-control" require>
+                    <input id="region" type="text" class="form-control" placeholder="رقم البطاقة" require>
                     <button id="sub" type="submit" class="btn btn-primary" style="margin-top: 20px;">Submit</button>
-                    <button onclick = "mainApp.logOut()" class="btn btn-success" style="margin-top: 20px;">LogOut</button>
+                    <button id="sus" onclick = "mainApp.logOut()" class="btn btn-success" style="margin-top: 20px;">Logout</button>
                     <div class="alert alert-success" style="margin-top: 10px;">
                          <strong>Success!</strong> Data sent successfully!
                     </div>
